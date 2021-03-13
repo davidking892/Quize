@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="header" class="header">
+      <a href="#default" class="logo">CompanyLogo</a>
+    </div>
+
+    <div id="dashboard" class="dashboard">
+      <!-- ExplainationContaier -->
+      <div id="explaination">
+        <!-- section1 -->
+        <div class="section1">
+          <p class="sorry">Sorry incorrect....</p>
+          <div class="block">
+            <img class="questionSound sound" src="images/sound.png" />
+            <p class="msg">
+              The Correct Answer is:
+            </p>
+          </div>
+          <div class="optionsContainer">
+            <span class="option">1</span>
+            <span class="option">2</span>
+            <span class="option">3</span>
+          </div>
+          <button class="submitBtn gotIt">Got it</button>
+        </div>
+
+        <!-- end section1 -->
+
+        <!-- section2 -->
+        <div class="section2">
+          <h2>Explaination</h2>
+
+          <div class="borderContainer">
+            <div class="block">
+              <img class="questionSound sound" src="images/sound.png" />
+              <p class="question"></p>
+            </div>
+            <div class="imageContainer"></div>
+            <div class="block">
+              <img class="subQuestionSound sound" src="images/sound.png" />
+              <p class="subQuestion"></p>
+            </div>
+
+            <div class="optionsContainer">
+              <span class="option">1</span>
+              <span class="option">2</span>
+              <span class="option">3</span>
+            </div>
+
+            <div class="answerSection">
+              <p>You answered:</p>
+              <div class="ansOptionsContainer">
+                <span class="option">1</span>
+                <span class="option">2</span>
+                <span class="option">3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end section2 -->
+
+        <!-- section3 -->
+        <div class="section3">
+          <div class="borderContainer">
+            <p class="question">Count the reptiles.</p>
+            <div class="imageContainer"></div>
+            <p class="answer">There is 1 reptile.</p>
+          </div>
+        </div>
+        <!-- end section3 -->
+
+        <button class="submitBtn gotIt">Got it</button>
+      </div>
+
+      <!-- end ExplainationContaier -->
+      <!-- QuizeContainer -->
+
+      <div id="quizeContainer">
+        <!-- QuestionsContaienr -->
+        <div id="questionContainer">
+          <div class="block">
+            <img class="questionSound sound" src="images/sound.png" />
+            <p class="question"></p>
+          </div>
+          <div class="imageContainer"></div>
+          <div class="block">
+            <img class="subQuestionSound sound" src="images/sound.png" />
+            <p class="subQuestion"></p>
+          </div>
+
+          <div class="optionsContainer">
+            <span class="option">1</span>
+            <span class="option">2</span>
+            <span class="option">3</span>
+          </div>
+
+          <button class="submitBtn" id="submitRequest">Submit</button>
+        </div>
+        <!-- end QuestionContainer -->
+
+        <!-- scoreBoard -->
+        <div class="score_board">
+          <div class="questionBoard board">
+            <div class="heading">
+              Question <br />
+              answered
+            </div>
+            <div class="result">
+              <span id="questionContent">0</span>
+            </div>
+          </div>
+          <div class="time board">
+            <div class="heading">
+              Time
+            </div>
+            <div class="result">
+              <span id="timeContent">
+                <span>
+                  <p id="col-1" class="col">00</p>
+                  HR
+                </span>
+                <span>
+                  <p id="col-2" class="col">00</p>
+                  MIN
+                </span>
+                <span
+                  ><p id="col-3" class="col">00</p>
+                  SEC
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="score board">
+            <div class="heading">
+              Smart Score
+            </div>
+            <div class="result">
+              <span id="scoreContent">0</span>
+            </div>
+          </div>
+        </div>
+        <!-- end scoreBoard -->
+      </div>
+
+      <!-- end QuizeContainer -->
+    </div>
+
+    <!-- success message -->
+
+    <div id="rightAnswerStatus"></div>
+
+    <!-- end success message -->
+
+    <!-- message Modal -->
+    <div id="messageModal" class="messageModal modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="message-close">&times;</span>
+        <div>
+          <div class="message-modal-header">
+            <h2>Modal Header</h2>
+          </div>
+          <div class="message-modal-body">
+            <div class="block">
+              <img class="questionSound sound" src="images/sound.png" />
+
+              <p>
+                You did not finish the question. Do you want to go back to the
+                question?
+              </p>
+            </div>
+          </div>
+
+          <div class="message-modal-footer">
+            <button class="message-modalBtn" id="message-modalBack">
+              Go back
+            </button>
+            <button class="message-modalBtn" id="message-modalSubmit">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end message Modal -->
+
+    <!--Display Results -->
+    <div id="resultContainer">
+      <div class="box">
+        <div class="boxElement">
+          <div class="section1">
+            <div class="showBoard">
+              <div>
+                Question answered:<br />
+                <hr />
+                <p id="questionDisplayContent">0</p>
+              </div>
+            </div>
+            <div class="showBoard">
+              Total Time Taken:<br />
+              <hr />
+              <p id="totalTimeTaken">0</p>
+            </div>
+            <div class="showBoard">
+              score:<br />
+              <hr />
+              <p id="scoreDisplayContent">0</p>
+            </div>
+          </div>
+          <div class="sideContainer">
+            <div class="section2">
+              <p>
+                <b>Congrutalation! You Won Gold medal</b>
+              </p>
+              <div class="medalsContainer">
+                <img src="images/goldMedal.png" />
+              </div>
+            </div>
+            <div class="practiceAgainContainer">
+              <p>To score more, play again <span id="restart">RESTART</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Display Results -->
+
+    <!-- javascript -->
+
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

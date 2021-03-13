@@ -1,0 +1,466 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #fbfaf8;
+  font-size: 21px !important;
+  color: #4f4d4a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  background: #0dac53;
+  display: block;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* end header */
+
+/* scoreBoard */
+
+.score_board {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fafaf9;
+  margin-left: 10rem;
+  text-align: center;
+}
+.score_board .heading {
+  padding: 10px 20px;
+}
+.score_board .questionBoard .heading {
+  background-color: #6ecc1a;
+}
+
+.score_board .score .heading {
+  padding: 10px;
+  background-color: #f1480e;
+}
+
+.score_board .time .heading {
+  background-color: #66d4f7;
+}
+.score_board #timeContent {
+  display: flex;
+}
+.score_board #timeContent span {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0 5px;
+}
+
+.score_board span {
+  color: #84807f;
+  font-weight: 800;
+  font-size: 30px;
+}
+.score_board .time span {
+  font-weight: 600;
+  font-size: 20px;
+}
+.result {
+  text-align: center;
+  padding: 1%;
+  height: 12vh !important;
+  background-color: #f1ece6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* end scoreBoard */
+
+#explaination {
+  display: none;
+  padding: 5% 10%;
+}
+
+.sound {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.block {
+  display: flex;
+  padding: 0;
+  margin: 1rem 0;
+}
+.block p {
+  margin: 0;
+}
+
+/* questionContainer */
+
+#quizeContainer {
+  padding: 2% 10%;
+  display: none;
+}
+
+#questionContainer .imageContainer .img {
+  cursor: pointer;
+}
+#questionContainer .imageContainer .img:hover {
+  opacity: 0.5;
+}
+#questionContainer .imageContainer .img.active {
+  opacity: 0.5;
+}
+
+.optionsContainer,
+.ansOptionsContainer {
+  background: #d1d5d6;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  padding: 5px;
+}
+.optionsContainer {
+  margin-top: 2rem;
+}
+
+.answerSection p {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.option {
+  width: 3rem;
+  height: 3rem;
+  background-color: #1596f5;
+  box-shadow: 0px 4px #1229b8;
+  color: #fefefe;
+  border-radius: 50%;
+  margin: 3px 5px;
+  cursor: context-menu;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all 0.2s ease-in;
+}
+#questionContainer .option {
+  cursor: pointer;
+}
+#questionContainer .option:hover {
+  background: #1229b8;
+}
+.option.active {
+  background: #1229b8;
+  box-shadow: none;
+}
+
+.submitBtn {
+  background: #15da57;
+  border: none;
+  padding: 10px 50px;
+  margin-left: auto;
+  border-radius: 30px;
+  color: whitesmoke;
+  font-size: 20px;
+  margin: 3% 0;
+}
+
+.submitBtn:hover {
+  background: #1af061;
+  cursor: pointer;
+}
+
+.question,
+.subQuestion {
+  cursor: context-menu;
+}
+
+/* endQuestionContainer */
+
+.section2 {
+  margin-top: 3rem;
+}
+.section3 {
+  margin-top: 1rem;
+}
+
+.borderContainer {
+  border: 1px solid lightslategray;
+  padding: 2% 3%;
+}
+
+.imageContainer {
+  display: flex;
+}
+.imgSubContainer {
+  margin: 20px;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.count {
+  width: 3rem;
+  height: 3rem;
+  background-color: lightskyblue;
+  color: #fefefe;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  display: none;
+  cursor: context-menu;
+}
+
+.starContainer {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.star {
+  width: 5rem;
+  height: 5rem;
+  color: #fefefe;
+  align-items: center;
+  justify-content: center;
+  top: -25px;
+  left: 8%;
+  display: flex;
+  position: relative;
+}
+
+.star p {
+  position: absolute;
+  top: 35%;
+}
+
+.count.displayCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count.active {
+  display: flex;
+}
+
+#explaination .section3 .img {
+  opacity: 0.7;
+}
+
+.sorry {
+  font-size: 3rem;
+  color: #85c1e9;
+  font-weight: bold;
+}
+
+#winnerModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+/* The Modal (background) */
+#messageModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+#messageModal .modal-content {
+  background-color: #fefefe;
+  margin: 6% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  padding: 3%;
+  position: relative;
+  border-radius: 30px;
+  border: 20px solid #e0e9e3;
+}
+
+/* The Close Button */
+#messageModal .message-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: #10fb5e;
+  border-radius: 50%;
+  padding: 6px 13px;
+  position: absolute;
+  top: -25px;
+  right: -20px;
+}
+
+#messageModal .message-close:hover,
+#messageModal .message-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.message-modal-footer {
+  display: flex;
+  justify-content: right;
+  margin-top: 10%;
+}
+.message-modalBtn {
+  margin: 0 1%;
+  padding: 8px 30px;
+  border-radius: 10px;
+  color: #fefefe;
+  cursor: pointer;
+}
+#message-modalBack {
+  background-color: #50e682;
+}
+#message-modalSubmit {
+  background-color: #50b2e6;
+}
+
+/* display container */
+
+#resultContainer {
+  background: url(images/bg.jpg) center/cover no-repeat;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+#resultContainer .box {
+  background-color: #f9e79f;
+  width: 50%;
+  height: 50%;
+  opacity: 0.9;
+  position: relative;
+}
+
+#resultContainer .boxElement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#resultContainer .section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#resultContainer .practiceAgainContainer {
+  text-align: right;
+  padding: 10px;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+#resultContainer .section2 .medalsContainer {
+  width: 150px;
+  height: 150px;
+  margin-right: 30px;
+}
+#resultContainer .showBoard p {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#resultContainer .section1 {
+  margin-right: auto;
+  padding: 30px;
+  border-right: 2px solid #3a61f3;
+}
+
+#resultContainer .showBoard {
+  border: 2px solid #faa716;
+  margin: 3%;
+  padding: 2%;
+  text-align: center;
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#resultContainer #restart {
+  color: #10c731;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none !important;
+  margin-left: 5px;
+}
+
+/* end display container */
+
+#rightAnswerStatus {
+  width: 200px;
+  height: 200px;
+  margin: 2%;
+  display: none;
+}
+
+.col {
+  border: 1px solid black;
+}
